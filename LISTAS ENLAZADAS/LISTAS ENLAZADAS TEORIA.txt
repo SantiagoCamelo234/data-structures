@@ -1,0 +1,123 @@
+## ESTRUCUTURAS DE DATOS ##
+- Sirven para representar datos en un ordenador
+- Arrays estructura de datos mas basico
+
+## LISTA ENLAZADA SIMPLE ##
+
+- Representa un grupo de elementos como si fuera una secuencia
+- Se guardan datos del mismo tipo
+- Ponemos el dato dentro de un nodo, estos nodos tienen punteros que permiten apuntar a otro nodo
+- El nodo principal se llama cabeza y es el unico que tenemos que conocer para trabajar con la lista
+- Para acceder a los otros nodos, solo tenemos que acceder a los punteros siguientes de cada uno de los nodos
+- Estos otros nodos que no son cabezas se denominan colas
+- El ultimo elemento apunta a una lista vacia
+- Las listas pueden estar apuntadas a cualquier direccion de memeoria no tienen que estar secuencialmente
+- No se puede acceder por indices se recorre elemento por elemento empezando desde la cabeza
+- Necesitan mas espacio en memoria ya que Tambien almacenan los punteros
+
+## EJEMPLO DE UNA LISTA ##
+ESTRUCUTURA nodo
+	elemento: libro
+	siguiente: PUNTERO A nodo
+FIN ESTRUCUTURA
+
+ESTRUCTURA lista
+	cabeza: PUNTERO A nodo
+FIN ESTRUCTURA
+
+## RECORRER UNA LISTA ##
+
+{-Esta es mi lista-}
+biblioteca: lista
+{-Accedo al primer nodo-}
+biblioteca.primero
+{-Accedo al primer libro-}
+biblioteca.primero.elemento
+{-Accedo al segundo libro-}
+biblioteca.primero.siguiente
+{-O al tercero-}
+biblioteca.primero.siguiente.siguiente
+
+- Podemos recorrer el la lista en un bucle que se acabara cuando lleguemos al ultimo elemento es decir una lista vacia
+
+FUNCTION RecorrerLista(l: Lista)
+	VARIABLE puntero: Nodo
+	puntero = l.cabeza
+	MIENTRAS (puntero != NULO){
+		ProcesarElemento(puntero.elemento)
+		puntero = puntero.siguiente
+
+	}
+FIN FUNCION
+
+## INSERTAR ELEMENTOS EN UNA LISTA ##
+
+## LISTA VACIA ##
+
+- Si una lista esta vacia, entonces no tiene nigun nodo
+- Por ende solo se debe crear un nuevo nodo y hacer que el puntero del primer nodo apunte a el
+VARIABLE nuevoNodo: Nodo
+nuevoNodo.elemento = l
+nuevoNodo.siguiente = NULO
+lista.primero = nuevoNodo
+
+## INSERTAR ELEMENTOS AL PRINCIPIO DE UNA LISTA ##
+
+
+- Se crea un nuevo nodo y se hace que este apunte al primer elemento de la lista
+- Y luego se establce que el nodo insertado ahora es la cabeza de la lista
+PROC InsertarPrincipio(l: Lista, b: Libro)
+	VARIABLE nuevoNodo : Nodo
+	
+	nuevoNodo.elemento = b
+	nuevoNodo.siguiente = l.primero
+	l.primero = nuevoNodo
+FIN PROC
+
+## INSERTAR ELEMENTOS AL FINAL DE UNA LISTA ##
+
+- Debemos recorrer la lista hasta llegar al ultimo elemento, despues instanciamos nuestro nuevo nodo y que el ultimo elemento de la lista puntee al elemento que acabamos de agregar
+
+## INSERTAR UN ELEMENTO DESPUES DE UN NODO ##
+
+- Se recorre la lista con un puntero llamado anterior, el cual va a apuntar al elemento anterior que se va a introducir
+- Luego se inserta el elemento nuevo apuntando al elemento que sigue a anterior
+
+## ELIMINAR ELEMENTOS ##
+
+## ELIMINAR EL PRIMER ELEMENTO DE UNA LISTA L ##
+- Se usa una variable temporal que guarda el primer elemento
+- Luego el elemento siguiente pasa a ser el primer elemento
+- Se elimina la variable temporal
+PROC EliminarPrimero(l: Lista)
+	VARIABLE temporal: Nodo
+
+	temporal = l.primero
+	l.primero = l.primero.siguiente
+	ELIMINAR temporal
+FIN PROC
+
+## ELIMINAR EL ULTIMO ELEMENTO DE UNA LISTA ##
+
+- Accedemos a la penultima pocision y elminarlo de forma parecida
+PROC EliminarUltimo(l:Lista)
+	VARIABLE temp: Nodo
+	VARIABLE nodo : Nodo
+
+	nodo = l.primero
+	MIENTRAS (nodo.siguiente.siguiente != NULO)
+		nodo = nodo.siguiente
+	FIN MIENTRAS
+
+	temp = nodo.siguiente
+	nodo.siguiente = NULL
+FIN PROC
+
+## ELIMINAR UN ELEMENTO INTERMEDIO ##
+
+- Accedemos a la pocision anterior al elemento que quiero eliminar
+- Hago que el puntero de la pocision anterior al elemento que quiero eliminar apunte al elemento siguiente, al del elemento que quiero eliminar
+
+
+
+
