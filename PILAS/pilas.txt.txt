@@ -1,0 +1,17 @@
+### PILAS ###
+- Estrucutura de tipo LIFO. Last in. First Out
+- El ultimo elemento que entra en una pila es el primero que sale 
+- Se puede implementar como una lista enlazada o una cola pero las operaciones seran distintas
+
+### APILAR (PUSH) ###
+- Introducir algo en la pila
+- Los elementos se introducen en una pila por un extremo
+- Se puede usar la function insertar principio
+
+### CIMA (PEEK) ###
+- Obtener el elemento que esta en la cima de la pila
+- Seria el ultimo elemento que hemos introducido
+
+### DESAPILAR (POP) ###
+- Elimina el ultimo elemento introducido en la pila
+- Se eliiminan los elementos que estan a la cabeza de la lista

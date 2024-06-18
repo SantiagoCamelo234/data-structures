@@ -1,0 +1,49 @@
+### COLAS ###
+- Funcionan como las filas de la vida real
+- Nos incorporamos al final de una cola
+- Avanzamos poco a poco hasta que llegamos a la cabeza de la cola
+- Una cola se puede componer a partir de una lista enlazada
+- Unimos los nodos desde el principio hasta el final por medio de punteros
+- Solo las operaciones son distintas
+
+## OPERACIONES ##
+
+# ENCOLAR #
+
+- Introducir algo en la cola
+- Los elementos se introucen en la cola por el final
+- Podemos encolar elementos agregandolos al final de nuestra lista
+- Reutilizamos la funcion insertarFinal
+
+# CONSULTAR #
+
+- Obtener el siguiente elemento de la cola
+- Como es una cola, el siguiente elemento de la cola estará al principio de la cola
+- Podemos obtener la cabeza de la cola accediendo al primer elemento de la cola
+
+# ELIMINAR #
+
+- Echar el siguiente elemento de la cola una vez ha sido eliminado
+- Como los elementos avanzan hacia adelante, hay que quitar la cabeza
+- Podemos hacerlo aprovechando la funcion eliminarPrincipio
+
+## OPTIMIZACIONES ##
+- Se agrega dentro de la estructura un puntero al ultimo elemento de la cola
+ESTRUCUTURA cola
+	cabeza: PUNTERO A nodo
+	final: PUNTERO a nodo
+FIN ESTRUCUTURA
+
+## RESUMEN ##
+
+- ENCOLAR: insertar a final
+- CONSULTAR: obtener la cabeza
+- Eliminar: eliminar la cabeza
+
+## DESPACHAR ##
+- Extrae el primer elemento de la cola, eliminarlo y devolverlo para que se procese
+FUNCION Despachar(Cola cola): Nodo
+	VARIABLE n: Nodo
+	n = ObtenerPrimero(cola) # Obtine la cabeza de la cola
+	EliminarPrimero(cola) # La elimina
+	DEVOLVER Nodo # Se devuelve el nodo que había antes como cabeza dela cola
