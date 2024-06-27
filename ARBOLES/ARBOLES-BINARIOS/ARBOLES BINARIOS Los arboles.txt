@@ -1,0 +1,69 @@
+### ARBOLES BINARIOS ###
+- Los arboles binarios son arboles de orden 2, es decir que mucho pueden tener dos hijos
+
+### TIPOS DE ARBOLES BINARIOS ###
+
+## FULL BINARY TREES ##
+- Todos los nodos del arbol binario tienen o dos hijos o ningun hijo
+
+## COMPLETE BINARY TREE ##
+- El ultimo nivel de un full buinary tree puede permitirse el prescindir de alguno de sus hijos (El padre del nodo hoja solo tiene un hijo), de ser asi el unico nodo debe estar a la izquierda
+- Pueden haber arboles que sean full y complete o que no sean ni full ni complete
+
+### ARBOLES DEGENERADOS ###
+
+- Cada nodo solo tiene un hijo
+- Se comportan como listas
+
+### ARBOLES BALANCEADOS ###
+- Un arbol binario balanceado intenta mantener la profundidad de sus dos subarboles la menor posible 
+- El balanceo o equilibrio de un arbol hace que algunas operaciones sean mas eficientes
+- Algunos arboles especiales se aprovechan del balanceo. Dependiendo de que tipo de balanceo intentemos usar se usa una regla u otra distinta
+
+
+### CAMBIOS EN LA ESTRUCUTURA ###
+ESTRUCTURA NODO_BT{
+	valor: ENTERO
+	izquierdo, derecho: PUNTERO a NODO_BT
+}
+
+### OPERACIONES ###
+- Insercion
+- Eliminacion
+- Localizacion
+- Recorrido
+
+## RECORRIDOS ##
+- Hacer un proceso sobre cada nodo del arbol
+- Existen varias formas sobre cada nodo del arbol
+- Existen varias formas de recorrer un arbol
+	- En anchura = Consiste en procesar a la vez todos los elementos del mismo nivel, cuando se termina un nivel se pasa al siguiente
+	- En preorden----|
+	- En inorden     | Estas son en profundidad
+	- En postorden---|
+	
+## RECORRIDO EN PROFUNDIDAD ##
+
+- Es mejor considerar los nodos izquierdo y derecho como subarboles
+- Se procesan:
+	- La raiz
+	- El subarbol izquierdo
+	- El subarbol derecho
+- Dependiendo de cuando se procese la raiz, tenemos varias configuarciones
+
+#PREORDEN#
+- Procesamos la raiz
+- Procesamos el arbol izquierdo
+- Procesamos el arbol derecho
+# INORDEN #
+- Procesamos el arbol izquierdo
+- Procesamos la raiz
+- Procesamos el arbol derecho
+
+SOLO PODEMOS PROCESAR LA RAIZ SI ESTA NO ESTA VACIA
+
+### OPERACIONES ELEMENTALES ###
+- Insercion
+- Localizacion
+- Eliminacion
+
