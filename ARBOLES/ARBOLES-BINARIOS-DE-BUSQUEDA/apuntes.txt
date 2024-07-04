@@ -1,0 +1,29 @@
+### ARBOLES DE BUSQUEDA ###
+- Es un arbol muy extendido
+- Un arbol binario binario de busqueda con raiz R es de busqueda cuando no es vacio y:
+- Si tiene un subarbol izquierdo, la raiz del subarbol izquierdo es menor a R, y a la vez el subarbol izquierdo tambien es de busqueda
+- Si tiene un subarbol derecho, la raiz del subarbol derecho es mayor a R y a la vez el subarbol derecho tambien es de busqueda
+
+# LOS ELEMENTOS DEBEN SER COMPARABLES 
+- Almacenar enteros
+- Almacenar caracteres por orden lexicografico
+- Almacenar objetos que siempre se identifiquen con una clave
+
+### OPERACIONES ###
+
+- Localizar elementos a partir de su clave 
+- Operacion que comprueba si uns clave esta en el arbol o no
+- Operacion obtener  el objeto cuyo identificador sea el que pedimos
+
+## INSERTAR ELEMENTOS ##
+
+- Es necesario introducir el elemento de una forma ordenanda en el arbol
+- Hay que distinguir entre si el arbol permite duplicados o no duplicados
+
+# REGLAS #
+
+- Si el arbol esta vacio insertamos el elemento en la raiz
+- Si la raiz del arbol es igual al elemento a inserta: si no tolerams duplicados, no insertamos o emitimos un error
+- Si la raiz del arbol es mayor al elemento a insertar insertamos en el subarbol izquierdo
+- Si la raiz del arbol es menor al elemento a insertar insertamos en el subarbol derecho
+
